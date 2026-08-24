@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.js && tsc -b && vite build",
+    "build": "node scripts/generate-sitemap.js && tsc -b && node --max-old-space-size=1536 ./node_modules/vite/bin/vite.js build",
     "build:analyze": "npm run build && node scripts/analyze-bundle.mjs",
     "bundle:check": "node scripts/check-bundle-budget.mjs",
     "icons:tighten": "node scripts/tighten-svg-viewboxes.mjs",
